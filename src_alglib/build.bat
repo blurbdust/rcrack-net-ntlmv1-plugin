@@ -1,8 +1,8 @@
-set LIB=C:\Program Files\OpenSSL-Win64\lib;%LIB%
+set LIB=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MT;%LIB%
 set INCLUDE=C:\Program Files\OpenSSL-Win64\include;%INCLUDE%
 
 
-cl /LD /O2 alglib1.c MD5.c /EXPORT:HashAlgorithms
+cl /LD /O2 alglib1.cpp DES.cpp /link /EXPORT:HashAlgorithms
 
 @del *.obj
 @del *.exp
